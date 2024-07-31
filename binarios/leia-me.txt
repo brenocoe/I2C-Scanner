@@ -1,0 +1,6 @@
+
+comando para criar um único binário para deploy
+
+cd "C:\Users\breno\OneDrive\Documentos\PlatformIO\Projects\CoeBrothers\2024\I2C Scanner\binarios"
+
+esptool --chip esp32-s3 merge_bin -o merged-firmware.bin --flash_mode dio --flash_freq 80m --flash_size keep 0x0 bootloader.bin 0x8000 partitions.bin 0x10000 firmware.bin 0x00c90000 littlefs.bin
